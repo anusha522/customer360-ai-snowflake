@@ -1,8 +1,19 @@
-definition_version: 1
-streamlit:
-  name: CUSTOMER360_AI
-  database: CUSTOMER_360_DB
-  schema: C360
-  query_warehouse: COMPUTE_WH
-  main_file: app.py
-  stage: CUSTOMER_360_DB.C360.CUSTOMER360_APP_STAGE
+definition_version: 2
+
+entities:
+  customer360_ai:
+    type: streamlit
+    identifier:
+      name: CUSTOMER360_AI
+      schema: C360
+      database: CUSTOMER_360_DB
+    title: "Customer360 AI"
+    query_warehouse: COMPUTE_WH
+    main_file: app.py
+    pages_dir: null
+    stage: CUSTOMER360_APP_STAGE
+    artifacts:
+      - app.py
+      - utils/
+      - views/
+      - components/
